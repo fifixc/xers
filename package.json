@@ -1,0 +1,26 @@
+{
+  "name": "xers",
+  "description": "Generate illustration stats cards for your GitHub readme",
+  "version": "1.0.50",
+  "keywords": [
+    "github-readme-stats",
+    "readme-stats",
+    "cards-art",
+    "github-card-art"
+  ],
+  "scripts": {
+    "test": "bun test",
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/swagger": "^0.7.4",
+    "dotenv": "^16.3.1",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}
