@@ -1,11 +1,24 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import { ElysiaApp } from '@/app';
+import { Elysia, t } from 'elysia';
+import { swagger } from '@elysiajs/swagger';
+import * as config from '@/config';
 
-const main = async (): Promise<void> => {
-  const server = new ElysiaApp();
-  await server.listen();
-};
+import { statsResponse } from '@/api';
 
-main();
+const app = new Elysia();
+
+app.use(swagger());
+app.get('/', ({ set }) => set.redirect = config.GITHUB_REPOSITORY);
+app.get('/stats', statsResponse, {
+  query: t.Object({
+      username: t.String(),
+      theme: t.Optional(t.String())
+  })
+});
+
+app.listen(config.PORT);
+console.log(
+  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
+);
