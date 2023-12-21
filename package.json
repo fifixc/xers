@@ -8,10 +8,11 @@
     "cards-art",
     "github-card-art"
   ],
+  "main": "build/index.js",
   "scripts": {
     "build:vercel": "bun run build && bun scripts/transform-paths.ts",
     "build": "bun build ./src/index.ts --outdir ./build",
-    "start": "node build/index.js",
+    "start": "bun build/index.js",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
   },
@@ -23,5 +24,5 @@
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.js"
+  "module": "build/index.js"
 }
