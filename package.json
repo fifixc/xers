@@ -11,7 +11,7 @@
   "scripts": {
     "build:vercel": "bun run build && bun scripts/transform-paths.ts",
     "build": "bun build ./src/index.ts --outdir ./build",
-    "start": "bun build/index.js",
+    "start": "node build/index.js",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
   },
