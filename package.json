@@ -2,7 +2,6 @@
   "name": "xers",
   "description": "Generate illustration stats cards for your GitHub readme",
   "version": "1.0.50",
-  "type": "module",
   "keywords": [
     "github-readme-stats",
     "readme-stats",
