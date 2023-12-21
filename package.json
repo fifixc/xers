@@ -2,17 +2,15 @@
   "name": "xers",
   "description": "Generate illustration stats cards for your GitHub readme",
   "version": "1.0.50",
+  "type": "module",
   "keywords": [
     "github-readme-stats",
     "readme-stats",
     "cards-art",
     "github-card-art"
   ],
-  "main": "build/index.js",
   "scripts": {
-    "build:vercel": "bun run build && bun scripts/transform-paths.ts",
-    "build": "bun build ./src/index.ts --outdir ./build",
-    "start": "bun build/index.js",
+    "start": "bun run src/index.ts",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
   },
@@ -24,5 +22,5 @@
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "build/index.js"
+  "module": "src/index.js"
 }
