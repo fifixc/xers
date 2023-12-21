@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build:vercel": "bun run build && bun scripts/transform-paths.ts",
-    "start": "bun run build && bun src/index.ts",
+    "start": "bun src/index.ts",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
   },
