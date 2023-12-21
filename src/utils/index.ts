@@ -1,2 +1,2 @@
-export * from './validators.js';
-export * from './fetcher.js';
+export * from './validators';
+export * from './fetcher';

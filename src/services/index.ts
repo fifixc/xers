@@ -1,2 +1,2 @@
-export * from './stats-data.js';
-export * from './stats-card.js';
+export * from './stats-data';
+export * from './stats-card';

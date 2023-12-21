@@ -1,5 +1,5 @@
-import { GRAPHQL_STATS_QUERY } from '@/queries/index.js';
-import { fetcher } from '@/utils/index.js';
+import { GRAPHQL_STATS_QUERY } from '@/queries';
+import { fetcher } from '@/utils';
 
 export const getStatsData = async (username: string): Promise<StatsResponse> => {
     let variables = {

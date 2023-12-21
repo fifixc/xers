@@ -1,4 +1,4 @@
-import { GITHUB_API } from '@/config.js';
+import { GITHUB_API } from '@/config';
 
 export const request = async (headers: Record<string, string>, data: Object) => {
     const response = await fetch(GITHUB_API, {

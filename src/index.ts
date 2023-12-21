@@ -5,13 +5,13 @@ import { Elysia, t } from 'elysia';
 import { swagger } from '@elysiajs/swagger';
 import * as config from '@/config';
 
-import statsResponse from '@/../api/index.js';
+import statsController from '@/api';
 
 const app = new Elysia();
 
 app.use(swagger());
 app.get('/', ({ set }) => set.redirect = config.GITHUB_REPOSITORY);
-app.get('/stats', statsResponse, {
+app.get('/stats', statsController, {
   query: t.Object({
       username: t.String(),
       theme: t.Optional(t.String())

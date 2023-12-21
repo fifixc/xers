@@ -1,4 +1,4 @@
-import { THEMES, GITHUB_USERNAME_REGEX } from '@/config.js';
+import { THEMES, GITHUB_USERNAME_REGEX } from '@/config';
 
 export const isValidUsername = (username: string): boolean => {
     if (GITHUB_USERNAME_REGEX.test(username)) return true;
