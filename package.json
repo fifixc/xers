@@ -10,6 +10,7 @@
     "github-card-art"
   ],
   "scripts": {
+    "build:vercel": "bun scripts/transform-paths.ts",
     "start": "bun run src/index.ts",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
