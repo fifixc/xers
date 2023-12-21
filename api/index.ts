@@ -6,7 +6,7 @@ type Params = {
     query: StatsQuery;
     set: any;
 }
-export const statsResponse = async ({ query, set }: Params) => {
+export default async ({ query, set }: Params) => {
     let { username, theme } = query;
     try {
         if (theme && !isValidTheme(theme)) throw Error('That theme does not exist!');
