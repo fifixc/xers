@@ -5,7 +5,7 @@ import { Elysia, t } from 'elysia';
 import { swagger } from '@elysiajs/swagger';
 import * as config from '@/config';
 
-import { statsResponse } from '@/api';
+import { statsResponse } from '@/../api';
 
 const app = new Elysia();
 
