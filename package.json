@@ -9,10 +9,10 @@
     "github-card-art"
   ],
   "scripts": {
+    "build:vercel": "bun run build && bun scripts/transform-paths.ts",
+    "start": "bun run build && bun src/index.ts",
     "test": "bun test",
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts",
-    "start": "NODE_ENV=production bun src/index.ts"
+    "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
     "@elysiajs/swagger": "^0.7.4",
