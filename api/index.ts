@@ -1,5 +1,5 @@
-import { getStatsCard, getStatsData } from '@/services';
-import { isValidTheme, isValidUsername } from '@/utils';
+import { getStatsCard, getStatsData } from '../src/services';
+import { isValidTheme, isValidUsername } from '../src/utils';
 
 
 type Params = {
