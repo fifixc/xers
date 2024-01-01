@@ -9,8 +9,8 @@
     "github-card-art"
   ],
   "scripts": {
-    "build": "bun build ./src/index.ts --target=bun --outdir=dist",
-    "start": "bun run dist/index.js",
+    "build": "bun tsc",
+    "start": "bun run src/index.js",
     "test": "bun test",
     "dev": "bun run --watch src/index.ts"
   },
